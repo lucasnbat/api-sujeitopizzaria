@@ -9,6 +9,7 @@ import { isAuthenticated } from './middlewares/isAuthenticated';
 import { CreateCategoryController } from './controllers/category/CreateCategoryController';
 import { ListCategoryController } from './controllers/category/ListCategoryController';
 import { CreateProductController } from './controllers/product/CreateProductController';
+import { ListByCategoryController } from './controllers/product/ListByCategoryController';
 
 const router = Router();
 
@@ -28,6 +29,6 @@ router.get('/category', isAuthenticated, new ListCategoryController().handle);
 
 // o nome do campo a ser enviado na req é o 'file' daqui
 router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle);
-
+router.get('/category/product', isAuthenticated, new ListByCategoryController().handle);
 
 export { router };
