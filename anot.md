@@ -20,3 +20,5 @@
 * npm install jsonwebtoken + npm install @types/jsonwebtoken
 * npm install dotenv => gerenciar var ambiente
 * para você fazer o TS identificar onde está sua pasta de tipos, coloca "typeRoots": ["./src/@types"], no seu tsconfig.json
+* npm install multer (trabalhar com imagens)
+* npm install @types/multer -D (tipagem do multer)
